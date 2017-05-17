@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://api.filepicker.io/v2/filepicker.js"></script>
+    <script src="js/filepicker_page.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+
+
+<form class="form-horizontal" role="form">
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-5"><b>Save Data</b></div>
+        <div class="col-xs-12" style="height:20px;"></div>
+    </div>
+
+
+    <!-- Text input-->
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="url">File Location</label>
+        <div class="col-md-4">
+            <input class="form-control input-xs" id="url" type="text" name="textinput" pattern="https?://.+"
+                   placeholder="Enter the file location">
+
+        </div>
+    </div>
+
+
+    <div class="form-group">
+        <label class="col-md-4 control-label" for="service">Select Destination</label>
+        <div class="col-md-4  input-lg">
+
+            <label for="service"></label><select name="service" id="service" required>
+            <option value="DROPBOX">Dropbox</option>
+            <option value="GOOGLE_DRIVE">Google Drive</option>
+            <option value="SKYDRIVE">Microsoft OneDrive</option>
+            <option value="BOX">Box</option>
+            <option value="EVERNOTE">Evernote</option>
+            <option value="FACEBOOK">Evernote</option>
+            <option value="FLICKR">Evernote</option>
+            <option value="FTP">FTP Server</option>
+        </select>
+            <div class="col-xs-12" style="height:20px;"></div>
+            <div>
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary"
+                        onclick="savingNow(service);return false;">Upload File
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</form>
+
+</body>
+
+</html>
